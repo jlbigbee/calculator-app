@@ -18,7 +18,27 @@ struct ContentView: View {
                     CalculatorButton(buttonText: "1")
                     CalculatorButton(buttonText: "2")
                     CalculatorButton(buttonText: "3")
-                    CalculatorButton(color: .orange, buttonText: "+")
+                    CalculatorButton(buttonText: "+", color: .orange)
+
+                }
+                HStack {
+                    CalculatorButton(buttonText: "4")
+                    CalculatorButton(buttonText: "5")
+                    CalculatorButton(buttonText: "6")
+                    CalculatorButton(buttonText: "-", color: .orange)
+
+                }
+                HStack {
+                    CalculatorButton(buttonText: "7")
+                    CalculatorButton(buttonText: "8")
+                    CalculatorButton(buttonText: "9")
+                    CalculatorButton(buttonText: "x", color: .orange)
+
+                }
+                HStack {
+                    CalculatorButton(buttonText: "0", width: 148)
+                    CalculatorButton(buttonText: "C", color: .gray)
+                    CalculatorButton(buttonText: "+", color: .orange)
 
                 }
             }

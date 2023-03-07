@@ -37,8 +37,8 @@ struct ContentView: View {
                 }
                 HStack {
                     CalculatorButton(buttonText: "0", width: 148, action: didPressNumber)
-                    CalculatorButton(buttonText: "C", color: .gray)
-                    CalculatorButton(buttonText: "+", color: .orange, action: didPressMode)
+                    CalculatorButton(buttonText: "C", color: .gray, action: didPressClear)
+                    CalculatorButton(buttonText: "=", color: .orange, action: didPressEquals)
 
                 }
             }
@@ -49,6 +49,12 @@ struct ContentView: View {
         currentValue = button.buttonText
     }
     func didPressMode(button: CalculatorButton) {
+       
+    }
+    func didPressClear(button: CalculatorButton) {
+       
+    }
+    func didPressEquals(button: CalculatorButton) {
        
     }
 }

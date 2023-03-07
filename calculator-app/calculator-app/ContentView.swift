@@ -15,10 +15,10 @@ struct ContentView: View {
             VStack {
                 TotalText()
                 HStack {
-                    CalculatorButton()
-                    CalculatorButton()
-                    CalculatorButton()
-                    CalculatorButton()
+                    CalculatorButton(buttonText: "1")
+                    CalculatorButton(buttonText: "2")
+                    CalculatorButton(buttonText: "3")
+                    CalculatorButton(color: .orange, buttonText: "+")
 
                 }
             }

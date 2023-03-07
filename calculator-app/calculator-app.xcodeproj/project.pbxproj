@@ -15,6 +15,7 @@
 		D0BDEFBE29B6707A00771C6B /* calculator_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BDEFBD29B6707A00771C6B /* calculator_appUITests.swift */; };
 		D0BDEFC029B6707A00771C6B /* calculator_appUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BDEFBF29B6707A00771C6B /* calculator_appUITestsLaunchTests.swift */; };
 		D0BDEFCD29B71B8C00771C6B /* TotalText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BDEFCC29B71B8C00771C6B /* TotalText.swift */; };
+		D0BDEFCF29B7209800771C6B /* CalculatorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BDEFCE29B7209800771C6B /* CalculatorButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		D0BDEFBD29B6707A00771C6B /* calculator_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calculator_appUITests.swift; sourceTree = "<group>"; };
 		D0BDEFBF29B6707A00771C6B /* calculator_appUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calculator_appUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D0BDEFCC29B71B8C00771C6B /* TotalText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalText.swift; sourceTree = "<group>"; };
+		D0BDEFCE29B7209800771C6B /* CalculatorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			children = (
 				D0BDEFA229B6707900771C6B /* calculator_appApp.swift */,
 				D0BDEFA429B6707900771C6B /* ContentView.swift */,
+				D0BDEFCE29B7209800771C6B /* CalculatorButton.swift */,
 				D0BDEFCC29B71B8C00771C6B /* TotalText.swift */,
 				D0BDEFA629B6707A00771C6B /* Assets.xcassets */,
 				D0BDEFA829B6707A00771C6B /* Preview Content */,
@@ -263,6 +266,7 @@
 				D0BDEFA529B6707900771C6B /* ContentView.swift in Sources */,
 				D0BDEFA329B6707900771C6B /* calculator_appApp.swift in Sources */,
 				D0BDEFCD29B71B8C00771C6B /* TotalText.swift in Sources */,
+				D0BDEFCF29B7209800771C6B /* CalculatorButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

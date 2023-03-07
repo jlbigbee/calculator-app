@@ -15,9 +15,9 @@ struct ContentView: View {
             VStack {
                 TotalText()
                 HStack {
-                    CalculatorButton(buttonText: "1")
-                    CalculatorButton(buttonText: "2")
-                    CalculatorButton(buttonText: "3")
+                    CalculatorButton(buttonText: "1", action: didPressButton)
+                    CalculatorButton(buttonText: "2", action: didPressButton)
+                    CalculatorButton(buttonText: "3", action: didPressButton)
                     CalculatorButton(buttonText: "+", color: .orange)
 
                 }
@@ -44,6 +44,9 @@ struct ContentView: View {
             }
         }
         .ignoresSafeArea()
+    }
+    func didPressButton(button: CalculatorButton) {
+        print(button.buttonText)
     }
 }
 

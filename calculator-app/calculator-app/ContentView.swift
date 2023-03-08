@@ -63,14 +63,16 @@ struct ContentView: View {
     }
     func didPressMode(button: CalculatorButton) {
         currentMode = button.mode
-        lastButtonWasMode = true
+        lastButtonWasMode = false
     }
     func didPressClear(button: CalculatorButton) {
         currentValue = "0"
        
     }
     func didPressEquals(button: CalculatorButton) {
-       
+        if currentMode == .notSet || lastButtonWasMode {
+            return
+        }
     }
 }
 

@@ -46,12 +46,14 @@ struct ContentView: View {
         .ignoresSafeArea()
     }
     func didPressNumber(button: CalculatorButton) {
-        currentValue = button.buttonText
+        let currentValueInt = Int (currentValue + button.buttonText)!
+        currentValue = "\(currentValueInt)"
     }
     func didPressMode(button: CalculatorButton) {
        
     }
     func didPressClear(button: CalculatorButton) {
+        currentValue = "0"
        
     }
     func didPressEquals(button: CalculatorButton) {

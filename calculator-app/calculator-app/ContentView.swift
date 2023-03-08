@@ -30,32 +30,33 @@ struct ContentView: View {
                     CalculatorButton(buttonText: "2", action: didPressNumber)
                     CalculatorButton(buttonText: "3", action: didPressNumber)
                     CalculatorButton(buttonText: "+", color: .orange, action: didPressMode, mode: .addition)
-
+                    
                 }
                 HStack {
                     CalculatorButton(buttonText: "4", action: didPressNumber)
                     CalculatorButton(buttonText: "5", action: didPressNumber)
                     CalculatorButton(buttonText: "6", action: didPressNumber)
                     CalculatorButton(buttonText: "-", color: .orange, action: didPressMode, mode: .subtraction)
-
+                    
                 }
                 HStack {
                     CalculatorButton(buttonText: "7", action: didPressNumber)
                     CalculatorButton(buttonText: "8", action: didPressNumber)
                     CalculatorButton(buttonText: "9", action: didPressNumber)
                     CalculatorButton(buttonText: "x", color: .orange, action: didPressMode, mode: .multiplication)
-
+                    
                 }
                 HStack {
                     CalculatorButton(buttonText: "0", width: 148, action: didPressNumber)
                     CalculatorButton(buttonText: "C", color: .gray, action: didPressClear)
                     CalculatorButton(buttonText: "=", color: .orange, action: didPressEquals)
-
+                    
                 }
             }
         }
         .ignoresSafeArea()
     }
+    
     func didPressNumber(button: CalculatorButton) {
         if lastButtonWasMode{
             lastButtonWasMode = false
@@ -75,25 +76,36 @@ struct ContentView: View {
     }
     func didPressClear(button: CalculatorButton) {
         currentValue = "0"
-       
+        
     }
     func didPressEquals(button: CalculatorButton) {
         if currentMode == .notSet || lastButtonWasMode {
             return
         }
-    
-    }
-    
-    func updateText() {
-        if currentMode == .notSet {
-            savedNum = currentValueInt
+            if currentMode == .addition {
+                savedNum += currentValueInt
+            } else if currentMode == .subtraction {
+                savedNum -= currentValueInt
+            } else if currentMode == .multiplication {
+                savedNum *= currentValueInt
+            }
+            currentValueInt = savedNum
+            updateText()
+            lastButtonWasMode = true
         }
-        currentValue = "\(currentValueInt)"
+        
+        
+    func updateText() {
+            if currentMode == .notSet {
+                savedNum = currentValueInt
+            }
+            currentValue = "\(currentValueInt)"
+        }
     }
-}
+    
+    struct ContentView_Previews: PreviewProvider {
+        static var previews: some View {
+            ContentView()
+        }
+    }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}

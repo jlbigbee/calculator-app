@@ -99,7 +99,11 @@ struct ContentView: View {
             if currentMode == .notSet {
                 savedNum = currentValueInt
             }
-            currentValue = "\(currentValueInt)"
+            let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        let num = NSNumber(value: currentValueInt)
+            
+        currentValue = numberFormatter.string(from: num) ?? "Error"
         }
     }
     
